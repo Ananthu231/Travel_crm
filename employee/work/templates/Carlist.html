@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        text-align: center;
+        background-color: darkcyan;
+        margin: auto;
+    }
+    th{
+        width: 80px;
+        height: 60px;
+        font-size: 25px;
+    }
+    td{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(242, 241, 239);
+    }
+</style>
+<body>
+
+<h2 style="text-align: center;">CAR_DETAILS</h2>
+<table border="2px">
+    <tr>
+        <th>car</th>
+        <th>colour</th>
+        <th>model</th>
+    </tr>
+    {%for car in m%}
+
+    <tr>
+    <td>{{car.car_name}}</td>
+    <td>{{car.colour}}</td>
+   <td> {{car.model}}</td>
+    </tr>
+    {%endfor%}
+    
+</table>
+</body>
+</html>

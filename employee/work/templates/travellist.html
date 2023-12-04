@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        text-align: center;
+        background-color: grey;
+        margin: auto;
+    }
+    th{
+        width: 80px;
+        height: 60px;
+        font-size: 25px;
+    }
+    td{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(242, 241, 239);
+    }
+</style>
+<body>
+        <h2 style="text-align: center;">INDIAN_TRAVEL</h2>
+    <table border="2px">
+        <tr>
+            <th>STATE</th>
+            <th>DISTRICT</th>
+            <th>VISIT</th>
+            <th>EXPERIENCE</th>
+            <th>VIEW</th>
+            
+            
+    
+        </tr>
+        {%for travel in tr%}
+
+        <tr>
+        <td>{{travel.state}}</td>
+        <td>{{travel.district}}</td>
+        <td> {{travel.visit}}</td>
+        <td> {{travel.experience}}</td>
+        <td>
+            <a href = "{%url 'travel' travel.id%}">link</a>
+            <a href="{%url 'travel-del' travel.id%}">delete</a>
+
+        </td>
+    
+        </tr>
+        {%endfor%}
+        
+    </table>
+</body>
+</html>
